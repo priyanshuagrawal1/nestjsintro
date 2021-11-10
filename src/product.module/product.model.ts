@@ -1,3 +1,14 @@
+import * as mongoose from 'mongoose';
+
+export const ProductSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  desc: { type: String, required: true },
+  price: { type: Number, required: true },
+});
+
 export class Product {
-  constructor(public name: String, public desc: String, public price: number) {}
+  id: String;
+  name: String;
+  desc: String;
+  price: number;
 }
